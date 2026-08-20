@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerador de Senhas Seguras</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>🔐 Gerador de Senhas</h1>
+
+        <p class="subtitle">
+            Crie uma senha forte e aleatória
+        </p>
+
+        <div class="password-box">
+
+            <input
+                type="text"
+                id="password"
+                readonly
+                placeholder="Sua senha aparecerá aqui"
+            >
+
+            <button id="copyBtn" title="Copiar senha">
+                📋
+            </button>
+
+        </div>
+
+        <div class="strength">
+
+            <div class="strength-bar">
+                <div id="strengthFill"></div>
+            </div>
+
+            <span id="strengthText">
+                Gere uma senha para verificar a força
+            </span>
+
+        </div>
+
+        <div class="option">
+
+            <div class="length-header">
+                <span>Tamanho da senha</span>
+                <span id="lengthValue">16</span>
+            </div>
+
+            <input
+                type="range"
+                id="length"
+                min="6"
+                max="64"
+                value="16"
+            >
+
+        </div>
+
+        <div class="checkboxes">
+
+            <label>
+                <input type="checkbox" id="uppercase" checked>
+                Letras maiúsculas (A-Z)
+            </label>
+
+            <label>
+                <input type="checkbox" id="lowercase" checked>
+                Letras minúsculas (a-z)
+            </label>
+
+            <label>
+                <input type="checkbox" id="numbers" checked>
+                Números (0-9)
+            </label>
+
+            <label>
+                <input type="checkbox" id="symbols" checked>
+                Símbolos (!@#$...)
+            </label>
+
+        </div>
+
+        <button id="generateBtn">
+            ⚡ Gerar senha
+        </button>
+
+        <div id="message"></div>
+
+        <div class="security-info">
+            🛡️ <strong>Privacidade:</strong>
+            a senha é gerada diretamente no seu navegador.
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
